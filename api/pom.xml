@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ma.simpleit</groupId>
-	<artifactId>tabdyl</artifactId>
+	<artifactId>tabdyl-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tabdyl</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Currency exchange platform</description>
 
 	<properties>
 		<java.version>1.8</java.version>
