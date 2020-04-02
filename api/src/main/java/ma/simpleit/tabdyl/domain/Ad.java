@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import ma.simpleit.tabdyl.domain.enumeration.Currency;
+import ma.simpleit.tabdyl.domain.enumeration.EscrowMode;
 import ma.simpleit.tabdyl.domain.enumeration.PaymentMethod;
 
 @Entity
@@ -27,6 +28,8 @@ public class Ad extends BaseEntity {
 	private Double exchangeRate;
 	@ManyToMany
 	private List<PaymentMethod> acceptedPaymentMethods;
+	@Enumerated
+	private EscrowMode escrowMode;
 	private Boolean active;
 	@ManyToOne
 	private User user;

@@ -4,7 +4,9 @@ public enum TransactionStatus {
 	
 	OPEN,
 	IN_PROGRESS,
-	COMPLETED,
+	AD_COMPLETED,
+	OFFER_COMPLETED,
+	CLOSED,
 	CANCELLED;
 
 }
