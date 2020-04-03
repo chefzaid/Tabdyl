@@ -30,4 +30,5 @@ public class UserController {
 		// TODO preprocessing
 		return userService.getUser(email);
 	}
+	
 }

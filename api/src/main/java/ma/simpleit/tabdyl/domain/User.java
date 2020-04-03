@@ -7,18 +7,22 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import ma.simpleit.tabdyl.domain.enumeration.Gender;
 import ma.simpleit.tabdyl.domain.enumeration.IdDocumentType;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true)
-public class User extends BaseEntity {
+public class User {
 	
+	@Id
+	private Long id;
 	private String username;
 	private String email;
 	private String password;
@@ -42,5 +46,9 @@ public class User extends BaseEntity {
 	@OneToMany
 	List<Review> reviews;
 	private LocalDateTime lastConnectionDate;
+	@CreatedDate
+	private LocalDateTime creationDate;
+	@LastModifiedDate
+	private LocalDateTime lastUpdateDate;
 
 }

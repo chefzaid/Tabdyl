@@ -1,23 +1,34 @@
 package ma.simpleit.tabdyl.domain;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import ma.simpleit.tabdyl.domain.enumeration.TransactionStatus;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true)
-public class Transaction extends BaseEntity {
+public class Transaction {
 
+	@Id
+	private Long id;
 	@ManyToOne
-	private Ad ad;
+	private Trade trade;
 	@OneToOne
 	private Offer offer;
 	@Enumerated
 	private TransactionStatus status;
+	@CreatedDate
+	private LocalDateTime creationDate;
+	@LastModifiedDate
+	private LocalDateTime lastUpdateDate;
+	
 }

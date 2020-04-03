@@ -1,16 +1,21 @@
 package ma.simpleit.tabdyl.domain;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=true)
-public class Review extends BaseEntity {
+public class Review {
 	
+	@Id
+	private Long id;
 	private Integer stars;
 	private String comment;
 	private Boolean trusted;
@@ -18,5 +23,7 @@ public class Review extends BaseEntity {
 	private User from;
 	@ManyToOne
 	private User to;
+	@CreatedDate
+	private LocalDateTime creationDate;
 
 }

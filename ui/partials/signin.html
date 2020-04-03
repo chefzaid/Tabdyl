@@ -9,7 +9,17 @@
 			<div class="col-md-5">
 				<form role="form" method="post" action="register.php">
 					<fieldset>							
-						<p class="pull-center">Sign up</p>	
+						<p class="pull-center">Sign up</p>
+						<div class="form-group">
+							<input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First name">
+						</div>
+						<div class="form-group">
+							<input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last name">
+						</div>
+						<div class="form-group">
+							<input type="text" name="birthdate" id="birthdate" class="form-control input-lg" 
+								onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birthdate">
+						</div>
 						<div class="form-group">
 							<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Username">
 						</div>
@@ -19,6 +29,7 @@
 						<div class="form-group">
 							<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
 						</div>
+
 						<div>
 							<input type="submit" class="btn btn-md" value="Register">
 						</div>
@@ -33,7 +44,7 @@
 					<fieldset>							
 						<p>Sign in</p>			
 						<div class="form-group">
-							<input type="email" name="username" id="username" class="form-control input-lg" placeholder="Username">
+							<input type="email" name="username" id="username" class="form-control input-lg" placeholder="Username or email">
 						</div>
 						<div class="form-group">
 							<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
