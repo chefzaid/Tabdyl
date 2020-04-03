@@ -19,6 +19,7 @@ import ma.simpleit.tabdyl.domain.enumeration.IdDocumentType;
 @EqualsAndHashCode(callSuper=true)
 public class User extends BaseEntity {
 	
+	private String username;
 	private String email;
 	private String password;
 	private String firstname;
