@@ -1,9 +1,11 @@
 package ma.simpleit.tabdyl.controller;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.PATCH;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,16 +21,34 @@ public class UserController {
 	private UserService userService;
 	
 	@POST
-	public void createAccount(User user) {
-		// TODO preprocessing
+	public Response createAccount(User user) {
 		userService.createAccount(user);
+		return Response.ok().build();
 	}
 	
 	@GET
 	@Path("/{email}")
 	public User getUser(@PathParam("email") String email) {
-		// TODO preprocessing
 		return userService.getUser(email);
+	}
+	
+	@PATCH
+	@Path("/{email}")
+	public Response deactivateUser(@PathParam("email") String email) {
+		userService.deactivateUser(email);
+		return Response.ok().build();
+	}
+	
+	@POST
+	@Path("/login/{email}/{password}")
+	public Response login(@PathParam("email") String email, @PathParam("password") String password) {
+		return Response.ok().build();
+	}
+	
+	@POST
+	@Path("/logout/{email}")
+	public Response logout(@PathParam("email") String email) {
+		return Response.ok().build();
 	}
 	
 }

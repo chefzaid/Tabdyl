@@ -1,5 +1,7 @@
 
 $( document ).ready(function() {
-	// Mehtods
+	$('#user-form').submit(function(event) {
+		postFormData("/user", "user-form");
+	});
 });
 
