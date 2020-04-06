@@ -2,33 +2,81 @@
 	<div class="container">
 		<h2 class="text-center" id="title">KYC details</h2>
 		 <p class="text-center">
-			<small id="passwordHelpInline" class="text-muted">Provide your KYC data.</small>
+			<small class="text-muted">Provide your KYC data.</small>
 		</p>
 		<hr />
-		<div class="row">
-			<div class="col-md-5">
-				<form id="user-form" name="user-form" role="form">
-					<fieldset>							
-						<p class="pull-center">KYC</p>
-						<div class="form-group">
-							<input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="First name">
-						</div>
-						<div class="form-group">
-							<input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Last name">
-						</div>
-						<div class="form-group">
-							<input type="text" name="birthdate" id="birthdate" class="form-control input-lg" 
-								onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birthdate">
-						</div>
-						<div class="form-group">
-							<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Username">
-						</div>
-						<div>
-							<input type="submit" class="btn btn-md" value="Register">
-						</div>
-					</fieldset>
-				</form>
-			</div>
+		
+		<div class="container py-5">
+		    <div class="row">
+		        <div class="col-md-10 mx-auto">
+		            <form>
+		                <div class="form-group row">
+		                    <div class="col-sm-6">
+		                        <label for="inputFirstname">First name</label>
+		                        <input type="text" class="form-control" id="inputFirstname" placeholder="First name">
+		                    </div>
+		                    <div class="col-sm-6">
+		                        <label for="inputLastname">Last name</label>
+		                        <input type="text" class="form-control" id="inputLastname" placeholder="Last name">
+		                    </div>
+		                </div>
+		                <div class="form-group row">
+		                    <div class="col-sm-6">
+		                        <label for="inputFirstname">Birthdate</label>
+		                        <input type="text" name="birthdate" id="birthdate" class="form-control" 
+									onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Birthdate">
+		                    </div>
+		                    <div class="col-sm-6">
+		                        <label for="inputLastname">Gender</label><br/>
+								<div class="form-check-inline">
+									<label class="customradio"><span class="radiotextsty">Male</span>
+									  <input type="radio" checked="checked" name="radio">
+									  <span class="checkmark"></span>
+									</label>
+									<div class="col-sm-4"></div>
+									<label class="customradio"><span class="radiotextsty">Female</span>
+									  <input type="radio" name="radio">
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+		                    </div>
+		                </div>
+		                <div class="form-group row">
+		                    <div class="col-sm-6">
+		                        <label for="inputAddressLine1">Address</label>
+		                        <input type="text" class="form-control" id="inputAddressLine1" placeholder="Street Address">
+		                    </div>
+		                    <div class="col-sm-6">
+		                        <label for="inputCity">City</label>
+		                        <input type="text" class="form-control" id="inputCity" placeholder="City">
+		                    </div>
+		                </div>
+		                <div class="form-group row">
+		                    <div class="col-sm-6">
+		                        <label for="inputPostalCode">Zip Code</label>
+		                        <input type="text" class="form-control" id="inputPostalCode" placeholder="Zip Code">
+		                    </div>
+		                    <div class="col-sm-6">
+		                        <label for="inputCity">Country</label>
+		                        <input type="text" class="form-control" id="inputCity" placeholder="Country">
+		                    </div>
+		                </div>
+		                <div class="form-group row">
+		                    <div class="col-sm-6">
+		                        <label for="inputContactNumber">Phone Number</label>
+		                        <input type="number" class="form-control" id="inputContactNumber" placeholder="Phone Number">
+		                    </div>
+		                    <div class="col-sm-6">
+		                        <label for="inputWebsite">Username</label>
+		                        <input type="text" class="form-control" id="inputWebsite" placeholder="Username">
+		                    </div>
+		                </div>
+		                <button type="button" class="btn btn-primary px-4 float-right">Save</button>
+		            </form>
+		        </div>
+		    </div>
 		</div>
 	</div>
 </div>
+
+<p></p>
