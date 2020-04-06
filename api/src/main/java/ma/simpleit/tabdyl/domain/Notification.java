@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -18,6 +20,7 @@ import ma.simpleit.tabdyl.domain.enumeration.NotificationStatus;
 public class Notification {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Enumerated
 	private NotificationEvent event;

@@ -1,8 +1,9 @@
 package ma.simpleit.tabdyl.domain.enumeration;
 
-public enum PaymentMethod {
+public enum Tier {
 	
-	BANK_TRANSFER,
-	PAYPAL;
+	TIER_1,
+	TIER_2,
+	TIER_3;
 
 }

@@ -19,6 +19,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import lombok.Data;
 import ma.simpleit.tabdyl.domain.enumeration.Gender;
 import ma.simpleit.tabdyl.domain.enumeration.IdDocumentType;
+import ma.simpleit.tabdyl.domain.enumeration.Tier;
 
 @Entity
 @Data
@@ -57,6 +58,8 @@ public class User {
 	List<BankAccount> bankAccounts;
 	@OneToMany
 	List<Review> reviews;
+	@Enumerated
+	private Tier tier;
 	private LocalDateTime lastConnectionDate;
 	@CreatedDate
 	private LocalDateTime creationDate;

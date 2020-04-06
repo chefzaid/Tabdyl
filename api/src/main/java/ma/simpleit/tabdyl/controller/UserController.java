@@ -21,8 +21,8 @@ public class UserController {
 	private UserService userService;
 	
 	@POST
-	public Response createAccount(User user) {
-		userService.createAccount(user);
+	public Response createUser(User user) {
+		userService.createUser(user);
 		return Response.ok().build();
 	}
 	
