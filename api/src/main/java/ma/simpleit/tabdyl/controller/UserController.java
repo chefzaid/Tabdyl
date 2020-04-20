@@ -22,7 +22,7 @@ public class UserController {
 	
 	@POST
 	public Response createUser(User user) {
-		userService.createUser(user);
+		userService.saveUser(user);
 		return Response.ok().build();
 	}
 	

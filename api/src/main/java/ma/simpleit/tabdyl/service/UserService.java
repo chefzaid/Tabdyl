@@ -17,7 +17,7 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	@Transactional
-	public void createUser(User user) {
+	public void saveUser(User user) {
 		log.debug("Creating user with email: " + user.getEmail());
 		userRepository.save(user);
 	}
