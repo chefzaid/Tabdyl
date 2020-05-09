@@ -7,5 +7,5 @@ public enum OfferStatus {
 	REFUSED,
 	WITHDRAWN,
 	IN_PROGRESS,
-	CLOSED;
+	COMPLETED;
 }

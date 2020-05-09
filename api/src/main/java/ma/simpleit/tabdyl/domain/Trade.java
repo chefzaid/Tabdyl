@@ -16,6 +16,7 @@ import org.springframework.data.annotation.CreatedDate;
 import lombok.Data;
 import ma.simpleit.tabdyl.domain.enumeration.Currency;
 import ma.simpleit.tabdyl.domain.enumeration.EscrowMode;
+import ma.simpleit.tabdyl.domain.enumeration.FulfillmentMode;
 import ma.simpleit.tabdyl.domain.enumeration.PaymentMethod;
 import ma.simpleit.tabdyl.domain.enumeration.TradeStatus;
 
@@ -38,6 +39,8 @@ public class Trade {
 	private List<PaymentMethod> acceptedPaymentMethods;
 	@Enumerated
 	private EscrowMode escrowMode;
+	@Enumerated
+	private FulfillmentMode fulfilmentMode;
 	@Enumerated
 	private TradeStatus status;
 	@ManyToOne

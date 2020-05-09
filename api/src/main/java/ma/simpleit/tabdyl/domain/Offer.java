@@ -24,6 +24,7 @@ public class Offer {
 	private Long id;
 	private String description;
 	private Double exchangeRate;
+	private Double amountToFulfill;
 	@Enumerated
 	private PaymentMethod paymentMethod;
 	@ManyToOne
