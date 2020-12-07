@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import dev.simpleit.tabdyl.beans.UserSession;
 import dev.simpleit.tabdyl.domain.User;
-import dev.simpleit.tabdyl.domain.UserSession;
 import dev.simpleit.tabdyl.service.UserService;
 
 @RestController
@@ -22,14 +22,14 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Void> createUser(User user) {
-		userService.saveUser(user);
+	public ResponseEntity<Void> save(User user) {
+		userService.save(user);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<User> getUser(@RequestParam("email") String email) {
-		User result = userService.getUser(email);
+	public ResponseEntity<User> findByEmail(@RequestParam("email") String email) {
+		User result = userService.findByEmail(email);
 		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 	

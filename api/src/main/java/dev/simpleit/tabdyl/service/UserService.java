@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import lombok.extern.apachecommons.CommonsLog;
+import dev.simpleit.tabdyl.beans.UserSession;
 import dev.simpleit.tabdyl.config.AppConfig;
 import dev.simpleit.tabdyl.domain.User;
-import dev.simpleit.tabdyl.domain.UserSession;
 import dev.simpleit.tabdyl.repository.UserRepository;
 import dev.simpleit.tabdyl.util.SessionManager;
 
@@ -36,13 +36,13 @@ public class UserService {
 	}
 
 	@Transactional
-	public void saveUser(User user) {
+	public void save(User user) {
 		log.debug("Creating user with email: " + user.getEmail());
 		userRepository.save(user);
 	}
 
 	@Transactional
-	public User getUser(String email) {
+	public User findByEmail(String email) {
 		log.debug("Retrieving email: " + email);
 		return userRepository.findByEmail(email);
 	}
